@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm ="clr-namespace:EzawodyWorsonEnterpraicment.ViewModel"
+                    xmlns:view ="clr-namespace:EzawodyWorsonEnterpraicment.View">
+
+    <DataTemplate DataType="{x:Type vm:HomeVM}">
+        <view:Home/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:HelpVM}">
+        <view:Help/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:PlayersVM}">
+        <view:Players/>
+    </DataTemplate>
+
+</ResourceDictionary>
