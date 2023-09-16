@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:EzawodyWorsonEnterpraicment"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="600" 
-        Width="850"
+        Height="800" 
+        Width="1200"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -15,16 +15,38 @@
         >
     <Grid>
         <!--//window Border //-->
-        <Border Background="#222831" CornerRadius="20">
+        <Border Background=" #FFFFFF" CornerRadius="20">
         </Border>
 
         <Grid>
             <!--//  Base Grid //-->
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="125"/>
                 <ColumnDefinition Width="225"/>
-                <ColumnDefinition Width="625"/>
+                <ColumnDefinition Width="855"/>
             </Grid.ColumnDefinitions>
-            
+
+            <!--//  Nav Panel //-->
+            <Grid HorizontalAlignment="Left" Width="125">
+                <Border Background="#121212" CornerRadius="20,0,0,20"/>
+                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click" Margin="25,135,25,625" Name="Button1"/>
+                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click2" Margin="25,210,25,550" Name="Button2"/>
+                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click3" Margin="25,300,25,460" Name="Button3"/>
+                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click4" Margin="30,750,45,20" x:Name="Button3_Copy"/>
+
+            </Grid>
+
+            <Grid Grid.Column="1" Width="225" Name="GridColumn2" Visibility="Collapsed">
+                <Border Background="#333333" />
+            </Grid>
+
+            <Grid Grid.Column="1" Width="225" Name="GridColumn3" Visibility="Collapsed">
+                <Border Background="Aqua" />
+            </Grid>
+
+            <Grid Grid.Column="1" Width="225" Name="GridColumn4" Visibility="Collapsed">
+                <Border Background="Yellow" />
+            </Grid>
         </Grid>
     </Grid>
 </Window>
