@@ -24,5 +24,7 @@ namespace EzawodyWorsonEnterpraicment.View
         {
             InitializeComponent();
         }
+
+       
     }
 }

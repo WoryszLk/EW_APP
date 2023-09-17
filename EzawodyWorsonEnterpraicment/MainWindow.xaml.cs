@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EzawodyWorsonEnterpraicment.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -97,7 +98,9 @@ namespace EzawodyWorsonEnterpraicment
         // column nr 1 
         private void DodajGracza_Click(object sender, RoutedEventArgs e)
         {
-            // Tutaj możesz dodać kod obsługi dodawania gracza
+            // Tworzy widok graczy i przypisuje go do ramki (MainFrame)
+            Players playersView = new Players();
+            MainFrame.Content = playersView;
         }
 
         private void UsunGracza_Click(object sender, RoutedEventArgs e)
@@ -109,7 +112,9 @@ namespace EzawodyWorsonEnterpraicment
         {
             // Tutaj możesz dodać kod obsługi wyświetlania informacji o graczu
         }
+        private void MainFrame_Navigated_1(object sender, NavigationEventArgs e)
+        {
 
-
+        }
     }
 }

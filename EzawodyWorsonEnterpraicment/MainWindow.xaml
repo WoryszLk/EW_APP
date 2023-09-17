@@ -23,7 +23,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="125"/>
                 <ColumnDefinition Width="225"/>
-                <ColumnDefinition Width="855"/>
+                <ColumnDefinition Width="850"/>
             </Grid.ColumnDefinitions>
 
 
@@ -38,24 +38,29 @@
             </Grid>
 
             <!--//  Nav Panel //-->
-            
-                <Grid Grid.Column="1" Width="225" Name="GridColumn2" Visibility="Collapsed">
-    <Border Background="#393E46" />
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="780" Width="225">
-        <Button Content="Dodaj Gracza" Click="DodajGracza_Click" Margin="5" />
-        <Button Content="Usuń Gracza" Click="UsunGracza_Click" Margin="5" />
-        <Button Content="Wyświetl Informacje" Click="WyswietlInformacje_Click" Margin="5" />
-    </StackPanel>
-                </Grid>
 
+            <Grid Grid.Column="1" Width="225" Name="GridColumn2" Visibility="Collapsed">
+                <Border Background="#393E46" />
 
-                <Grid Grid.Column="1" Width="225" Name="GridColumn3" Visibility="Collapsed">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="780" Width="225">
+                    <Button Content="Dodaj Gracza" Click="DodajGracza_Click" Margin="5" />
+                    <Button Content="Usuń Gracza" Click="UsunGracza_Click" Margin="5" />
+                    <Button Content="Wyświetl Informacje" Click="WyswietlInformacje_Click" Margin="5" />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Width="225" Name="GridColumn3" Visibility="Collapsed">
                 <Border Background="#00ADB5" />
                 </Grid>
 
                 <Grid Grid.Column="1" Width="225" Name="GridColumn4" Visibility="Collapsed">
                 <Border Background="#393E44" />
                 </Grid>
+
+            <!-- Frame -->
+            <Frame x:Name="MainFrame" Grid.Column="2" Navigated="MainFrame_Navigated_1">
+
+            </Frame>
+            
         </Grid>
     </Grid>
 </Window>
