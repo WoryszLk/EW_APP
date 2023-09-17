@@ -15,9 +15,9 @@
         >
     <Grid>
         <!--//window Border //-->
-        <Border Background=" #FFFFFF" CornerRadius="20">
+        <Border Background="#EEEEEE" CornerRadius="20">
         </Border>
-
+            
         <Grid>
             <!--//  Base Grid //-->
             <Grid.ColumnDefinitions>
@@ -26,27 +26,36 @@
                 <ColumnDefinition Width="855"/>
             </Grid.ColumnDefinitions>
 
-            <!--//  Nav Panel //-->
+
             <Grid HorizontalAlignment="Left" Width="125">
-                <Border Background="#121212" CornerRadius="20,0,0,20"/>
-                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click" Margin="25,135,25,625" Name="Button1"/>
-                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click2" Margin="25,210,25,550" Name="Button2"/>
-                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click3" Margin="25,300,25,460" Name="Button3"/>
-                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click4" Margin="30,750,45,20" x:Name="Button3_Copy"/>
-
+                <Border Background="#222831" CornerRadius="20,0,0,20"/>
+                <StackPanel>
+                    <Button Content="Gracze" Click="ShowColumnButton_Click" Margin="10,135,10,10" Name="Button1" Style="{StaticResource RoundedButtonStyle}" Height="32" IsCancel="True"/>
+                    <Button Content="Baza danych" Click="ShowColumnButton_Click2" Margin="10,10,10,10" Name="Button2" Style="{StaticResource RoundedButtonStyle}" Height="32"/>
+                </StackPanel>
+                <Button Content="Pokaż kolumnę" Click="ShowColumnButton_Click3" Margin="8,240,13,528" Name="Button3" Style="{StaticResource RoundedButtonStyle}" Width="105" Height="32"/>
+                <Button Content="Zamknij" Click="ClosingAllCollumns" Margin="10,755,15,10" x:Name="ClosingAllColumnsButton" Style="{StaticResource RoundedButtonStyle}"/>
             </Grid>
 
-            <Grid Grid.Column="1" Width="225" Name="GridColumn2" Visibility="Collapsed">
-                <Border Background="#333333" />
-            </Grid>
+            <!--//  Nav Panel //-->
+            
+                <Grid Grid.Column="1" Width="225" Name="GridColumn2" Visibility="Collapsed">
+    <Border Background="#393E46" />
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="780" Width="225">
+        <Button Content="Dodaj Gracza" Click="DodajGracza_Click" Margin="5" />
+        <Button Content="Usuń Gracza" Click="UsunGracza_Click" Margin="5" />
+        <Button Content="Wyświetl Informacje" Click="WyswietlInformacje_Click" Margin="5" />
+    </StackPanel>
+                </Grid>
 
-            <Grid Grid.Column="1" Width="225" Name="GridColumn3" Visibility="Collapsed">
-                <Border Background="Aqua" />
-            </Grid>
 
-            <Grid Grid.Column="1" Width="225" Name="GridColumn4" Visibility="Collapsed">
-                <Border Background="Yellow" />
-            </Grid>
+                <Grid Grid.Column="1" Width="225" Name="GridColumn3" Visibility="Collapsed">
+                <Border Background="#00ADB5" />
+                </Grid>
+
+                <Grid Grid.Column="1" Width="225" Name="GridColumn4" Visibility="Collapsed">
+                <Border Background="#393E44" />
+                </Grid>
         </Grid>
     </Grid>
 </Window>
